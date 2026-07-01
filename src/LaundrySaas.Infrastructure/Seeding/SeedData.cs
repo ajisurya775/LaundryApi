@@ -1,6 +1,7 @@
 using BCrypt.Net;
 using LaundrySaas.Domain.MultiTenancy;
 using LaundrySaas.Domain.Users;
+using LaundrySaas.Domain.Billing;
 using LaundrySaas.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,8 @@ public static class SeedData
 
         var paymentMethods = await SeedPaymentMethods(context, tenant);
         await SeedPos(context, tenant, branches, paymentMethods);
+
+        await SeedBilling.SeedAsync(context);
 
         await context.SaveChangesAsync();
     }
