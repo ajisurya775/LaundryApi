@@ -1,0 +1,425 @@
+{
+  "format": 1,
+  "restore": {
+    "/var/www/project/LaundrySaas/src/LaundrySaas.Api/LaundrySaas.Api.csproj": {}
+  },
+  "projects": {
+    "/var/www/project/LaundrySaas/src/LaundrySaas.Api/LaundrySaas.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/var/www/project/LaundrySaas/src/LaundrySaas.Api/LaundrySaas.Api.csproj",
+        "projectName": "LaundrySaas.Api",
+        "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Api/LaundrySaas.Api.csproj",
+        "packagesPath": "/home/ajisurya/.nuget/packages/",
+        "outputPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ajisurya/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/var/www/project/LaundrySaas/src/LaundrySaas.Application/LaundrySaas.Application.csproj": {
+                "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Application/LaundrySaas.Application.csproj"
+              },
+              "/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/LaundrySaas.Contracts.csproj": {
+                "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/LaundrySaas.Contracts.csproj"
+              },
+              "/var/www/project/LaundrySaas/src/LaundrySaas.Infrastructure/LaundrySaas.Infrastructure.csproj": {
+                "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Infrastructure/LaundrySaas.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/var/www/project/LaundrySaas/src/LaundrySaas.Application/LaundrySaas.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/var/www/project/LaundrySaas/src/LaundrySaas.Application/LaundrySaas.Application.csproj",
+        "projectName": "LaundrySaas.Application",
+        "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Application/LaundrySaas.Application.csproj",
+        "packagesPath": "/home/ajisurya/.nuget/packages/",
+        "outputPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ajisurya/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/var/www/project/LaundrySaas/src/LaundrySaas.Domain/LaundrySaas.Domain.csproj": {
+                "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Domain/LaundrySaas.Domain.csproj"
+              },
+              "/var/www/project/LaundrySaas/src/LaundrySaas.SharedKernel/LaundrySaas.SharedKernel.csproj": {
+                "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.SharedKernel/LaundrySaas.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/LaundrySaas.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/LaundrySaas.Contracts.csproj",
+        "projectName": "LaundrySaas.Contracts",
+        "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/LaundrySaas.Contracts.csproj",
+        "packagesPath": "/home/ajisurya/.nuget/packages/",
+        "outputPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ajisurya/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/var/www/project/LaundrySaas/src/LaundrySaas.Domain/LaundrySaas.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/var/www/project/LaundrySaas/src/LaundrySaas.Domain/LaundrySaas.Domain.csproj",
+        "projectName": "LaundrySaas.Domain",
+        "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Domain/LaundrySaas.Domain.csproj",
+        "packagesPath": "/home/ajisurya/.nuget/packages/",
+        "outputPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ajisurya/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/var/www/project/LaundrySaas/src/LaundrySaas.SharedKernel/LaundrySaas.SharedKernel.csproj": {
+                "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.SharedKernel/LaundrySaas.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/var/www/project/LaundrySaas/src/LaundrySaas.Infrastructure/LaundrySaas.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/var/www/project/LaundrySaas/src/LaundrySaas.Infrastructure/LaundrySaas.Infrastructure.csproj",
+        "projectName": "LaundrySaas.Infrastructure",
+        "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Infrastructure/LaundrySaas.Infrastructure.csproj",
+        "packagesPath": "/home/ajisurya/.nuget/packages/",
+        "outputPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ajisurya/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/var/www/project/LaundrySaas/src/LaundrySaas.Application/LaundrySaas.Application.csproj": {
+                "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Application/LaundrySaas.Application.csproj"
+              },
+              "/var/www/project/LaundrySaas/src/LaundrySaas.Domain/LaundrySaas.Domain.csproj": {
+                "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.Domain/LaundrySaas.Domain.csproj"
+              },
+              "/var/www/project/LaundrySaas/src/LaundrySaas.SharedKernel/LaundrySaas.SharedKernel.csproj": {
+                "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.SharedKernel/LaundrySaas.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.9.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/var/www/project/LaundrySaas/src/LaundrySaas.SharedKernel/LaundrySaas.SharedKernel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/var/www/project/LaundrySaas/src/LaundrySaas.SharedKernel/LaundrySaas.SharedKernel.csproj",
+        "projectName": "LaundrySaas.SharedKernel",
+        "projectPath": "/var/www/project/LaundrySaas/src/LaundrySaas.SharedKernel/LaundrySaas.SharedKernel.csproj",
+        "packagesPath": "/home/ajisurya/.nuget/packages/",
+        "outputPath": "/var/www/project/LaundrySaas/src/LaundrySaas.SharedKernel/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ajisurya/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

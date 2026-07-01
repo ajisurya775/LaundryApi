@@ -1,0 +1,15 @@
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/bin/Debug/net9.0/LaundrySaas.Domain.deps.json
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/bin/Debug/net9.0/LaundrySaas.Domain.dll
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/bin/Debug/net9.0/LaundrySaas.Domain.pdb
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/bin/Debug/net9.0/LaundrySaas.SharedKernel.dll
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/bin/Debug/net9.0/LaundrySaas.SharedKernel.pdb
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/obj/Debug/net9.0/LaundrySaas.Domain.csproj.AssemblyReference.cache
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/obj/Debug/net9.0/LaundrySaas.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/obj/Debug/net9.0/LaundrySaas.Domain.AssemblyInfoInputs.cache
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/obj/Debug/net9.0/LaundrySaas.Domain.AssemblyInfo.cs
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/obj/Debug/net9.0/LaundrySaas.Domain.csproj.CoreCompileInputs.cache
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/obj/Debug/net9.0/LaundryS.9B79EAC1.Up2Date
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/obj/Debug/net9.0/LaundrySaas.Domain.dll
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/obj/Debug/net9.0/refint/LaundrySaas.Domain.dll
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/obj/Debug/net9.0/LaundrySaas.Domain.pdb
+/var/www/project/LaundrySaas/src/LaundrySaas.Domain/obj/Debug/net9.0/ref/LaundrySaas.Domain.dll

@@ -1,0 +1,11 @@
+/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/bin/Debug/net9.0/LaundrySaas.Contracts.deps.json
+/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/bin/Debug/net9.0/LaundrySaas.Contracts.dll
+/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/bin/Debug/net9.0/LaundrySaas.Contracts.pdb
+/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/obj/Debug/net9.0/LaundrySaas.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/obj/Debug/net9.0/LaundrySaas.Contracts.AssemblyInfoInputs.cache
+/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/obj/Debug/net9.0/LaundrySaas.Contracts.AssemblyInfo.cs
+/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/obj/Debug/net9.0/LaundrySaas.Contracts.csproj.CoreCompileInputs.cache
+/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/obj/Debug/net9.0/LaundrySaas.Contracts.dll
+/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/obj/Debug/net9.0/refint/LaundrySaas.Contracts.dll
+/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/obj/Debug/net9.0/LaundrySaas.Contracts.pdb
+/var/www/project/LaundrySaas/src/LaundrySaas.Contracts/obj/Debug/net9.0/ref/LaundrySaas.Contracts.dll
