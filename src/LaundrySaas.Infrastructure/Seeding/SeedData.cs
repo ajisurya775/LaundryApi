@@ -36,7 +36,9 @@ public static class SeedData
         tenant = new Tenant(
             Guid.NewGuid(),
             "Demo Tenant",
-            "Demo Company");
+            "Demo Company",
+            "ID",
+            "+628123456789");
 
         context.Set<Tenant>().Add(tenant);
 

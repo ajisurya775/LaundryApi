@@ -1,4 +1,9 @@
+using System;
+using System.Linq;
+using System.Text.Json;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using LaundrySaas.Application.Contracts.Common;
 
 namespace LaundrySaas.Api.Middleware;
 
@@ -33,26 +38,40 @@ public class TenantResolverMiddleware
             }
             else
             {
-                context.Response.StatusCode = StatusCodes.Status400BadRequest;
-                await context.Response.WriteAsync("Invalid X-Tenant-Id format. It must be a valid GUID.");
+                await WriteErrorAsync(context, "Invalid X-Tenant-Id format. It must be a valid GUID.");
                 return;
             }
         }
         else
         {
-            // Allow bypassing tenant check for public API endpoints (e.g., registration) or weatherforecast
+            // Allow bypassing tenant check for public API endpoints (e.g., registration, login, complete-profile) or weatherforecast
             if (path.Equals("/api/v1/tenants/register", StringComparison.OrdinalIgnoreCase) || 
+                path.Equals("/api/v1/tenants/complete-profile", StringComparison.OrdinalIgnoreCase) || 
+                path.Equals("/api/v1/tenants/login", StringComparison.OrdinalIgnoreCase) || 
+                path.Equals("/api/v1/tenants/login/firebase", StringComparison.OrdinalIgnoreCase) || 
                 path.Equals("/weatherforecast", StringComparison.OrdinalIgnoreCase))
             {
                 await _next(context);
                 return;
             }
 
-            context.Response.StatusCode = StatusCodes.Status400BadRequest;
-            await context.Response.WriteAsync("X-Tenant-Id header is missing.");
+            await WriteErrorAsync(context, "X-Tenant-Id header is missing.");
             return;
         }
 
         await _next(context);
+    }
+    private static async Task WriteErrorAsync(HttpContext context, string message)
+    {
+        context.Response.ContentType = "application/json";
+        context.Response.StatusCode = StatusCodes.Status400BadRequest;
+        
+        var apiResponse = ApiResponse.CreateError(message, message);
+        var json = JsonSerializer.Serialize(apiResponse, new JsonSerializerOptions 
+        { 
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase 
+        });
+        
+        await context.Response.WriteAsync(json);
     }
 }

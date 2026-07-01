@@ -44,7 +44,12 @@ public class ApplicationDbContext : DbContext
         base.OnModelCreating(modelBuilder);
 
         // Configure Primary Keys & Multi-Tenant Global Query Filters
-        modelBuilder.Entity<Tenant>().HasKey(t => t.Id);
+        modelBuilder.Entity<Tenant>(builder =>
+        {
+            builder.HasKey(t => t.Id);
+            builder.Property(t => t.CountryCode).HasMaxLength(10).IsRequired(false);
+            builder.Property(t => t.PhoneNumber).HasMaxLength(30).IsRequired(false);
+        });
 
         modelBuilder.Entity<Branch>(builder =>
         {

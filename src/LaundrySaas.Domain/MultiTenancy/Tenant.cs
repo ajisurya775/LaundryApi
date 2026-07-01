@@ -6,12 +6,16 @@ public class Tenant : AggregateRoot
 {
     public string Name { get; private set; }
     public string CompanyName { get; private set; }
+    public string? CountryCode { get; private set; }
+    public string? PhoneNumber { get; private set; }
     public bool IsActive { get; private set; }
 
-    public Tenant(Guid id, string name, string companyName) : base(id)
+    public Tenant(Guid id, string name, string companyName, string? countryCode, string? phoneNumber) : base(id)
     {
         Name = name;
         CompanyName = companyName;
+        CountryCode = countryCode;
+        PhoneNumber = phoneNumber;
         IsActive = true;
     }
 
@@ -22,10 +26,12 @@ public class Tenant : AggregateRoot
         CompanyName = null!;
     }
 
-    public void UpdateDetails(string name, string companyName)
+    public void UpdateDetails(string name, string companyName, string? countryCode, string? phoneNumber)
     {
         Name = name;
         CompanyName = companyName;
+        CountryCode = countryCode;
+        PhoneNumber = phoneNumber;
     }
 
     public void Deactivate()
