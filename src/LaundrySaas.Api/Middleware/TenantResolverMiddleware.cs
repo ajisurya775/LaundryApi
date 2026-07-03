@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using LaundrySaas.Application.Contracts.Common;
+using LaundrySaas.Application.Common;
 
 namespace LaundrySaas.Api.Middleware;
 
@@ -49,6 +49,7 @@ public class TenantResolverMiddleware
                 path.Equals("/api/v1/tenants/complete-profile", StringComparison.OrdinalIgnoreCase) || 
                 path.Equals("/api/v1/tenants/login", StringComparison.OrdinalIgnoreCase) || 
                 path.Equals("/api/v1/tenants/login/firebase", StringComparison.OrdinalIgnoreCase) || 
+                path.Equals("/api/v1/plans", StringComparison.OrdinalIgnoreCase) || 
                 path.Equals("/weatherforecast", StringComparison.OrdinalIgnoreCase))
             {
                 await _next(context);

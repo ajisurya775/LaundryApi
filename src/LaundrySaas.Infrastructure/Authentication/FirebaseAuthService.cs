@@ -5,7 +5,7 @@ using FirebaseAdmin;
 using FirebaseAdmin.Auth;
 using Google.Apis.Auth.OAuth2;
 using Microsoft.Extensions.Configuration;
-using LaundrySaas.Application.Abstractions;
+using LaundrySaas.Application.Identity.Services;
 
 namespace LaundrySaas.Infrastructure.Authentication;
 

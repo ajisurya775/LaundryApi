@@ -4,8 +4,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using LaundrySaas.Application.Abstractions;
-using LaundrySaas.Domain.Users;
+using LaundrySaas.Application.Identity.Services;
 
 namespace LaundrySaas.Infrastructure.Authentication;
 
@@ -18,18 +17,17 @@ public class TokenService : ITokenService
         _jwtSettings = jwtSettings.Value;
     }
 
-    public string GenerateToken(User user)
+    public string GenerateToken(Guid userId, Guid tenantId, string email, string fullName)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
         var key = Encoding.ASCII.GetBytes(_jwtSettings.Secret);
 
         var claims = new[]
         {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-            new Claim(JwtRegisteredClaimNames.Email, user.Email),
-            new Claim(JwtRegisteredClaimNames.Name, user.FullName),
-            new Claim("role", user.Role.ToString()),
-            new Claim("tenantId", user.TenantId.ToString())
+            new Claim(JwtRegisteredClaimNames.Sub, userId.ToString()),
+            new Claim(JwtRegisteredClaimNames.Email, email),
+            new Claim(JwtRegisteredClaimNames.Name, fullName),
+            new Claim("tenantId", tenantId.ToString())
         };
 
         var tokenDescriptor = new SecurityTokenDescriptor

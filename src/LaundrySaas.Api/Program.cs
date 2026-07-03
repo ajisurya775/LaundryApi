@@ -1,25 +1,30 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;
-using LaundrySaas.Application.Abstractions;
-using LaundrySaas.Infrastructure.MultiTenancy;
+using LaundrySaas.Application;
+using LaundrySaas.Infrastructure;
+using LaundrySaas.Infrastructure.Authentication;
+using LaundrySaas.Infrastructure.Persistence;
+using LaundrySaas.Infrastructure.Seeding;
 using LaundrySaas.Api.Middleware;
+using LaundrySaas.Api.Authorization;
+using LaundrySaas.Api.Endpoints.AuthTenants;
+using LaundrySaas.Api.Endpoints.Billing;
 using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
-using LaundrySaas.Infrastructure.Data;
-using LaundrySaas.Infrastructure.Seeding;
-using LaundrySaas.Infrastructure.Authentication;
-using LaundrySaas.Api.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddScoped<ITenantProvider, TenantProvider>();
-builder.Services.AddScoped<IBranchProvider, BranchProvider>();
+builder.Services.AddMemoryCache();
+
+// Register Application & Infrastructure Services
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 // Configure JWT options & Authentication
-builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection(JwtSettings.SectionName));
 var jwtSettings = new JwtSettings();
 builder.Configuration.GetSection(JwtSettings.SectionName).Bind(jwtSettings);
 
@@ -41,15 +46,11 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Secret))
     };
 });
+
+// Register Permission-based Authorization
+builder.Services.AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>();
+builder.Services.AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>();
 builder.Services.AddAuthorization();
-
-// Register Token and FirebaseAuth services
-builder.Services.AddScoped<ITokenService, TokenService>();
-builder.Services.AddSingleton<IFirebaseAuthService, FirebaseAuthService>();
-
-// Register PostgreSQL DbContext
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
 
 // Register MongoDB Client & Database
 var mongoConnectionString = builder.Configuration.GetSection("MongoDbSettings:ConnectionString").Value
@@ -85,6 +86,7 @@ app.UseAuthorization();
 app.UseMiddleware<TenantResolverMiddleware>();
 
 app.MapTenantEndpoints();
+app.MapPlanEndpoints();
 
 // Database Migration & Seed
 await using var scope = app.Services.CreateAsyncScope();

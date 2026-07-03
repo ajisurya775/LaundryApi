@@ -1,8 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
     <ProjectReference Include="..\LaundrySaas.Domain\LaundrySaas.Domain.csproj" />
     <ProjectReference Include="..\LaundrySaas.SharedKernel\LaundrySaas.SharedKernel.csproj" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.2" />
   </ItemGroup>
 
   <PropertyGroup>

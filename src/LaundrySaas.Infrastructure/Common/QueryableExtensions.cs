@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using LaundrySaas.Application.Common;
 
-namespace LaundrySaas.Application.Contracts.Common;
+namespace LaundrySaas.Infrastructure.Common;
 
 public static class QueryableExtensions
 {

@@ -5,7 +5,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using LaundrySaas.Application.Contracts.Common;
+using LaundrySaas.Application.Common;
 
 namespace LaundrySaas.Api.Middleware;
 

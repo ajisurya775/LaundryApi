@@ -1,14 +1,17 @@
 namespace LaundrySaas.Domain.Billing;
 
 /// <summary>
-/// Generic payment method types supported across all payment gateway providers.
+/// Payment method types yang didukung.
+/// Selaras dengan channel yang disediakan oleh Xendit payment gateway.
 /// </summary>
 public enum PaymentMethodType
 {
-    VirtualAccount,   // Transfer bank via Virtual Account
-    EWallet,          // Digital wallet (OVO, DANA, GoPay, ShopeePay, dll)
+    Cash,             // Pembayaran tunai (offline, tanpa gateway)
+    VirtualAccount,   // Transfer bank via Virtual Account (BCA VA, BNI VA, Mandiri VA, dll)
+    EWallet,          // Digital wallet (OVO, DANA, GoPay, ShopeePay, LinkAja)
     QrCode,           // QRIS / QR payment
     RetailOutlet,     // Pembayaran di minimarket (Alfamart, Indomaret)
-    BankTransfer,     // Transfer bank langsung
-    CreditCard        // Kartu kredit
+    BankTransfer,     // Transfer bank langsung / direct debit
+    CreditCard,       // Kartu kredit / debit
+    PayLater          // Paylater (Kredivo, Akulaku, dll)
 }
